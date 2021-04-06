@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/create-quiz.css">
+    <link rel="icon" href="img/Logo.jpg" type="images">
+
+    <!---Font awesome CDN--->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <section class="quiz">
+        <div class="container container-paddingup">
+            <h1 class="page-title">Create Quiz</h1>
+            <div class="grid-container">
+                <div class="btn-whole-container">
+                    <div class="btn-container">
+                        <button class="btn btn-multiple-choice">Multiple Choice <i class="fas fa-check-circle"></i></button>
+                        <button class="btn">True or False <i class="fas fa-check"></i> <i class="fas fa-times"></i></button>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn">Fill in the Blanks <i class="fas fa-sticky-note"></i></button>
+                        <button class="btn">Enumeration <i class="fas fa-list"></i></button>
+                    </div>
+                </div>
+                <div class="quiz-and-create-container">
+                    <div class="create-quiz-container">
+                        <p><span class="textarea title-quiz" role="textbox" contenteditable></span></p>
+                        <div class="multiple-choice inside-quiz-container">
+                            <p><span class="textarea" role="textbox" contenteditable></span></p>
+                            <div class="selection-container">
+                                  <label class="container-radio">
+                                    <span class="textarea textarea-answer" role="textbox" contenteditable></span>
+                                    <input type="radio" checked="checked" name="radio">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="container-radio">
+                                    <span class="textarea textarea-answer" role="textbox" contenteditable></span>
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="container-radio">
+                                    <span class="textarea textarea-answer" role="textbox" contenteditable></span>
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                  </label>
+                                  <label class="container-radio">
+                                    <span class="textarea textarea-answer" role="textbox" contenteditable></span>
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark"></span>
+                                  </label>
+                            </div>
+                        </div>
+                        <div class="true-false inside-quiz-container">
+                            <p><span class="textarea" role="textbox" contenteditable></span></p>
+                            <div class="selection-container">
+                                <label class="container-radio">True
+                                  <input type="radio" name="radio">
+                                  <span class="checkmark  checkmark-radio-tf"></span>
+                                </label>
+                                <label class="container-radio">False
+                                  <input type="radio" name="radio">
+                                  <span class="checkmark  checkmark-radio-tf"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="fill-in-the-blanks inside-quiz-container">
+                            <p><span class="textarea" role="textbox" contenteditable></span></p>
+                            <div class="selection-container">
+                                <p class="note">Note: Please put underscores in the part of the sentence you wanted to emphasize the answer.</p>
+                                <p>Answer:</p>
+                                <p><span class="textarea textarea-answer" role="textbox" contenteditable></span></p>
+                            </div>
+                        </div>
+                        <div class="enumeration inside-quiz-container">
+                            <p><span class="textarea" role="textbox" contenteditable></span></p>
+                            <div class="selection-container">
+                                <p>Answer:</p>
+                                <p><span class="textarea textarea-answer" role="textbox" contenteditable></span></p>
+                                <div class="btn-container btn-addremove">
+                                    <button class="btn">Add</button>
+                                    <button class="btn">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn create-btn">Create Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/create-quiz.js"></script>
+</body>
+</html>

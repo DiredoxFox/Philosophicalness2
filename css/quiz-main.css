@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* Scroll Bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #121212; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(138, 138, 138); 
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Bitter', serif;
+    font-size: 10px;
+    color: #fff;
+}
+
+section{
+    padding: 3.9rem 0;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #fff
+}
+
+.container{
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+/* Navigation */
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5),transparent);
+}
+
+.nav{
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-toggle{
+    color: #fff;
+    font-size: 2.2rem;
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%);
+    right: 2.5rem;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+.menu-toggle .opened{
+    display: none;
+    cursor: pointer;
+}
+
+.nav-list{
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.9);
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    transform: translateX(-100%);
+    transition: transform .5s;
+}
+
+.nav::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    z-index: 1000;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .5s;
+}
+
+.open .fa-times{
+    display: block;
+}
+
+.open .fa-bars{
+    display: none;
+}
+
+.open .nav-list{
+    transform: translateX(0);
+}
+
+.open .nav::before{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-link{
+    display: block;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    transition: color .5s;
+    border-bottom: 2px solid rgba(255,255,255,.3);
+}
+
+.nav-link:hover{
+    color: rgba(255,255,255,.5);
+}
+
+/* Quiz */
+.quiz{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/quiz-bg.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.container-paddingup{
+    padding-top: 2.4rem;
+}
+
+.btn{
+    font-family: 'Bitter', serif;
+    margin: .5rem 0;
+    outline: none;
+    background-color: #000;
+    border: #fff solid 1px;
+    color: #fff;
+    width: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.user-quiz-container{
+    overflow: auto;
+    margin: .5rem 0;
+    background-color: rgba(0,0,0,.8);
+    height: 50vh;
+}
+
+.quiz-created{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    margin: 2rem;
+    padding: 1.5rem 1rem;
+    width: 2;
+    border: #fff solid 1px;
+}
+
+.quiz-created h1{
+    font-weight: 300;
+}
+
+.manage-quiz{
+    display: none;
+    margin: 0 2rem;
+}
+
+.edit, .delete{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.open-manage{
+    display: flex;
+}
+
+/* Quiz Philosophicalness Modal */
+.philo-quiz-modal{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    display: flex;
+    transform: translateY(-100%);
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+    transition: transform 1s;
+}
+
+.open-modal{
+    transform: translateY(0);
+}
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.philo-btn-difficulty{
+    font-size: 1.5rem;
+    padding: .1rem 0;
+}
+
+.philo-btn-difficulty h1{
+    font-weight: 500;
+}
+
+.philo-btn-difficulty h2{
+    font-family: 'Quicksand', sans-serif;
+    display: unset;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+.separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.diamond{
+    padding: 1rem;
+    margin: 0 .4rem;
+    background-color: #000;
+    border: #fff solid .1rem;
+    transform: rotate(-45deg);
+}
+    
+.line{
+    width: 100%;
+    max-width: 100%;
+    height: .01rem;
+    background-color: #fff;
+    position: relative;
+}
+
+@media screen and (min-width:900px){
+    section{
+        padding: 7.9rem;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+
+    .nav{
+        justify-content: space-between;
+    }
+
+    .nav-list{
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        padding: 0;
+        justify-content: initial;
+        flex-direction: row;
+        transform: initial;
+        transition: initial;
+    }
+
+    .nav-item{
+        margin: 0 2.4rem;
+        border: none;
+    }
+
+    .nav-item:last-child{
+        margin-right: 0;
+    }
+
+    .nav-link{
+        font-size: 1.3rem;
+        font-weight: 400;
+        border-bottom: none;
+    }
+
+    .active{
+        position: relative;
+    }
+
+    .active::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        left: 0;
+        bottom: -3px;
+    }
+
+    .container-quiz{
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+
+    .btn-container{
+        height: 100%;
+        padding-right: 2rem;
+        display: grid;
+    }
+
+    .user-quiz-container{
+        height: 100%;
+    }
+
+    .btn{
+        font-size: 3rem;
+        font-weight: 700;
+        transition: all .5s;
+    }
+
+    .btn:hover{
+        color: #000;
+        background-color: #fff;
+    }
+
+    .edit,.delete{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .philo-modal{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+    .philo-btn-difficulty{
+        padding: 0 2rem;
+        position: relative;
+        color: #000;
+    }
+
+    .philo-btn-difficulty h2{
+        font-size: 1.5rem;
+    }
+
+    .separator-up{
+        transform: translateY(-110%);
+    }
+
+    .separator-down{
+        transform: translateY(110%);
+    }
+
+    .philo-btn-difficulty a{
+        transition: color 1s;
+    }
+
+    .philo-btn-difficulty{
+        transition: all 1s;
+    }
+
+    .philo-btn-difficulty:hover{
+        background-color: #fff;
+    }
+
+    .text-description{
+        opacity: 0;
+        animation: scale 1s forwards;
+        animation-delay: 1s;
+    }
+
+    .text-change{
+        color: #000;
+    }
+}
+
+/* Animation */
+@keyframes scale{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

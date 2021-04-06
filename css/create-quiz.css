@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* Scroll Bar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #121212; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #fff; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(138, 138, 138); 
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Bitter', serif;
+    font-size: 10px;
+    color: #fff;
+}
+
+section{
+    padding: 3.9rem 0;
+    overflow: hidden;
+}
+
+button{
+    outline: none;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: #fff
+}
+
+.container{
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+
+.grid-container{
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Create Quiz */
+.quiz{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/quiz-bg.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.btn-whole-container{
+    margin: 1rem 0;
+}
+
+.btn-container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: .5rem;
+}
+
+.btn-enumeration{
+    grid-template-columns: 100% 0;
+}
+
+.btn{
+    width: 100%;
+    margin: .3rem 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    padding: 1rem 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: #fff solid 1px;
+}
+
+.create-quiz-container{
+    margin: .5rem 0;
+    background-color:rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 50vh;
+    overflow: auto;
+}
+
+.textarea {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    resize: hidden;
+    min-height: 40px;
+    line-height: 20px;
+    text-align: left;
+    padding: 1rem;
+    outline: none;
+    border-bottom: #fff solid 1px;
+    font-size: 1.5rem;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.textarea[contenteditable]:empty::before {
+    content: "Input your question here";
+    color: gray;
+}
+
+.inside-quiz-container{
+    border:#fff solid 1px;
+    margin: 2rem;
+}
+
+/* Title Quiz */
+.title-quiz[contenteditable]:empty::before{
+    content: "Input the title of the quiz here";
+}
+
+/* Multiple Choice */
+.selection-container{
+    margin: 2rem 0;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+/* The container */
+.container-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  display: none;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: #eee solid 1px;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.textarea-answer[contenteditable]:empty::before {
+    content: "Input your answer here";
+}
+
+/* True or False */
+.true-false{
+    font-weight: 100;
+    font-size: 1.8rem;
+}
+
+.checkmark-radio-tf{
+    top: 0;
+}
+
+/* Fill in the Blanks */
+.note{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: solid #fff 1px;
+}
+
+/* Enumeration */
+.btn-addremove{
+    margin-top: 2rem;
+}
+
+/* Create Btn */
+.create-btn{
+    background-color: #fff;
+    color: #000;
+}
+
+@media screen and (min-width:900px){
+    section{
+        padding: 7.9rem;
+    }
+
+    .page-title{
+        font-size: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .grid-container{
+        display:grid;
+        grid-template-columns: 40% 60%;
+        grid-gap: 1rem;
+        height: auto;
+    }
+    
+    .create-quiz-container{
+        height: 60vh;
+    }
+
+    .btn-whole-container{
+        margin: 0;
+        display: grid;
+    }
+
+    .btn-container{
+        grid-template-columns: unset;
+        grid-template-rows: 50%;
+    }
+
+    .btn-addremove{
+        grid-template-rows: unset;
+        grid-template-columns: 50% 50%;
+    }
+
+    .btn{
+        font-family: 'Bitter', serif;
+        font-weight: 700;
+        font-size: 2rem;
+        transition: all .5s;
+    }
+
+    .btn:hover{
+        color: #000;
+        background-color: #fff;
+    }
+
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/quiz-main.css">
+    <link rel="icon" href="img/Logo.jpg" type="images">
+
+    <!---Font awesome CDN--->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars closed"></i>
+                    <i class="fas fa-times opened"></i>
+                </div>
+                <a href="index.html" class="logo"><img src="img/Logo2.png" alt=""></a>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="home-page.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="philosophers.html" class="nav-link">Philosophers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="gallery.html" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="quiz-main.html" class="nav-link">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header Ends -->
+
+    <section class="quiz">
+        <div class="container container-paddingup container-quiz">
+            <div class="btn-container">
+                <button class="btn philosophicalness-btn">Philosophicalness Quizzes <i class="fas fa-scroll"></i></button>
+                <button class="btn create-btn">Create Quiz <i class="fas fa-plus-square"></i></button>
+                <button class="btn manage-btn">Manage Quiz <i class="fas fa-tasks"></i></button>
+            </div>
+            <div class="user-quiz-container">
+                <div class="quiz-container-created">
+                    <div class="quiz-created">
+                        <h1>Title of the quiz</h1>
+                    </div>
+                    <div class="manage-quiz">
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete">Delete</button>
+                    </div>
+                </div>
+                <div class="quiz-container-created">
+                    <div class="quiz-created">
+                        <h1>Title of the quiz</h1>
+                    </div>
+                    <div class="manage-quiz">
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete">Delete</button>
+                    </div>
+                </div>
+                <div class="quiz-container-created">
+                    <div class="quiz-created">
+                        <h1>Title of the quiz</h1>
+                    </div>
+                    <div class="manage-quiz">
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Quiz Container End -->
+
+    <section class="philo-quiz-modal">
+        <div class="close">
+            <a href="#"><i class="fas fa-times close-modal"></i></a>
+        </div>
+        <div class="container philo-modal">
+            <div class="philo-btn-difficulty easy">
+                <a href="#">
+                <div class="separator separator-up">
+                    <div class="line line-left"></div>
+                    <div class="diamond"></div>
+                    <div class="line line-right"></div>
+                </div>
+                <div class="text-modal">
+                    <h1>Easy</h1>
+                    <h2>In this easy round, you'll encounter questions answerable by multiple choice. </h2>
+                </div>
+                <div class="separator separator-down">
+                    <div class="line line-left"></div>
+                    <div class="diamond"></div>
+                    <div class="line line-right"></div>
+                </div>
+                </a>
+            </div>
+            <div class="philo-btn-difficulty hard">
+                <a href="#">
+                <div class="separator separator-up">
+                    <div class="line line-left"></div>
+                    <div class="diamond"></div>
+                    <div class="line line-right"></div>
+                </div>
+                <div class="text-modal">
+                    <h1>Average</h1>
+                    <h2>This average round is composed of true or false and fill in the blanks questions.</h2>
+                </div>
+                <div class="separator separator-down">
+                    <div class="line line-left"></div>
+                    <div class="diamond"></div>
+                    <div class="line line-right"></div>
+                </div>
+                </a>
+            </div>
+            <div class="philo-btn-difficulty difficult">
+                <a href="#">
+                <div class="separator separator-up">
+                    <div class="line line-left"></div>
+                    <div class="diamond"></div>
+                    <div class="line line-right"></div>
+                </div>
+                <div class="text-modal">
+                    <h1>Hard</h1>
+                    <h2>This hard round is composed of enumeration questions.</h2>
+                </div>
+                <div class="separator separator-down">
+                    <div class="line line-left"></div>
+                    <div class="diamond"></div>
+                    <div class="line line-right"></div>
+                </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>
